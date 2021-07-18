@@ -6,7 +6,7 @@ class Requests:
 
     @staticmethod
     def FetchPrevHash():
-        response = requests.post("http://localhost:8000/getBlocks")  # Collect previous blocks
+        response = requests.post("")  # Collect previous blocks
         jResponse = response.json()
 
         with open('blockchain.json', 'w', encoding='utf-8') as f:
@@ -16,7 +16,7 @@ class Requests:
 
     @staticmethod
     def SaveNewBlock(nonce, name, hash):
-        response = requests.post("http://localhost:8000/createBlock", json={'nonce': nonce, 'name': name, 'hash': hash})
+        response = requests.post("", json={'nonce': nonce, 'name': name, 'hash': hash})
         if response.status_code == 200:
             print("Successfully mined block " + hash)
         else:
