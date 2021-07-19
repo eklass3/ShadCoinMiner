@@ -7,8 +7,8 @@ prev = Requests.FetchPrevHash()  # Previous blockchain hash
 
 h = "***"  # Current hash. Starts at '***' by default.
 
-# @TODO Generate hash and none!
+# TODO generate valid hash
 
-print("Hash " + h + " Nonce " + str(nonce))  # Print output.
+# print("Hash " + h + " Nonce " + str(nonce))  # Print output.
 
-Requests.SaveNewBlock(nonce, name, h)  # Save to blockchain
+# TODO Save block
